@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../polices/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+/* couleurs */
+/* violet */
+/* rose */
+/* vert */
+/* gris clair */
+/* pages resto */
+/* loader */
+/*-------------- Lignes "index / fonctionnement" & "restos / dish" --------------*/
+/*-------------- Alignement (h4, p) "index / cartes resto" & "restos / dish"--------------*/
+/*-------------- Flex • alignement et ajustement mep --------------*/
+/*-------------- visuel resto "pages restos / identity--------------*/
+.button {
+  color: #FFFFFF;
+  height: 3.5rem;
+  min-width: 15rem;
+  border-radius: 2rem;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  box-shadow: 2px 5px 10px #aaaaaa;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  /* A */
+  /* pour alignement du texte de btn */
+  justify-content: center;
+  /* A */
+  /* alignement horizontal du texte de btn */
+  align-items: center;
+  /* A */
+  /* alignement vertical du texte de btn */
+  position: relative;
+  /* G */
+  /* pour positionnement de ::before dans btn */
+}
+.button::after {
+  /* éclaircissement de btn • élément en-dessous du texte → ::after */
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  background-color: #FFFFFF;
+  box-shadow: 2px 5px 5px #000000;
+  position: absolute;
+  /* G */
+  /* pour positionnement de ::after dans btn */
+  left: 0;
+  /* G */
+  /* positionnement de ::after dans btn */
+  top: 0;
+  /* G */
+  /* positionnement de ::after dans btn */
+  opacity: 0;
+  /* état initial de ::after */
+  transition: opacity 500ms ease-in-out;
+}
+.button:hover::after {
+  opacity: 0.2;
+  /* état final de ::after */
+}
+
+/*# sourceMappingURL=style.css.map */
