@@ -66,4 +66,28 @@
   /* état final de ::after */
 }
 
+.header {
+  padding: 20px 0;
+  position: relative;
+  /* F */
+  /* pour le positionnement de .return */
+  display: flex;
+  align-items: center;
+}
+.header__return {
+  font-size: 1.8rem;
+  position: absolute;
+  /* F */
+  /* positionnement de .return */
+  left: 2rem;
+  /* F */
+  /* positionnement de .return */
+}
+.header__return .fas {
+  color: #000000;
+}
+.header__logo {
+  margin: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
