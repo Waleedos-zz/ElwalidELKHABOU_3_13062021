@@ -1,4 +1,4 @@
-/*-------------- Lignes "index / fonctionnement" & "restos / dish" --------------*/
+/*------ Lignes "index / fonctionnement" & "restos / dish" ------*/
 
 @mixin window {
 	width: 100%;
@@ -9,7 +9,7 @@
 }
 
 
-/*-------------- Alignement (h4, p) "index / cartes resto" & "restos / dish"--------------*/
+/*------ Alignement (h4, p) "index / cartes resto" & "restos / dish"------*/
 
 @mixin ajust-h4-p {
 	h4, p {
@@ -26,7 +26,7 @@
 	}
 }
 
-/*-------------- Flex • alignement et ajustement mep --------------*/
+/* ------ Flex - alignement et ajustement mep ------ */
 
 @mixin flex-align-row-between-center-padding {
 	padding: 0 2rem 0 1rem;
@@ -57,7 +57,7 @@
 	align-items: flex-end; 			/* A */ /* alignement vertical des sous éléments */
 }
 
-/*-------------- visuel resto "pages restos / identity--------------*/
+/* ------ visuel resto "pages restos / identity ------ */
 
 @mixin identity {
 	width: 100%;

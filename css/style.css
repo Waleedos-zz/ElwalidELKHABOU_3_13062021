@@ -1,18 +1,46 @@
-/* Error: Undefined mixin.
- *    ,
- * 56 |         @include window;
- *    |         ^^^^^^^^^^^^^^^
- *    '
- *   scss/pages/_index.scss 56:3  @import
- *   scss/main.scss 5:9           root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 56 \2502          @include window;\a    \2502          ^^^^^^^^^^^^^^^\a    \2575 \a   scss/pages/_index.scss 56:3  @import\a   scss/main.scss 5:9           root stylesheet";
+@charset "UTF-8";
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../polices/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+/* couleurs */
+/* violet */
+/* rose */
+/* vert */
+/* gris clair */
+/* pages resto */
+/*-------------- Lignes "index / fonctionnement" & "restos / dish" --------------*/
+/*-------------- Alignement (h4, p) "index / cartes resto" & "restos / dish"--------------*/
+/*-------------- Flex • alignement et ajustement mep --------------*/
+/*-------------- visuel resto "pages restos / identity--------------*/
+/* Break points 480 (560) 780 960*/
+body {
+  font-family: Roboto-Regular, Arial, sans-serif;
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h3 {
+  font-weight: normal;
+}
+
+h1, h3 {
+  font-family: Shrikhand, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  /* les padding et bordures ne modifient pas les dimensions des boites */
+}
+
+/*# sourceMappingURL=style.css.map */
