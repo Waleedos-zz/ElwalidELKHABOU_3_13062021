@@ -1,7 +1,4 @@
-/*---------- INDEX MAIN LOADING ----------*/
-
-
-/*---------- INDEX SECTION 1 - SEARCH----------*/
+/* ---------- INDEX SECTION 1 - SEARCH ---------- */
 
 .search {
 	padding: 20px 0;
@@ -17,7 +14,8 @@
 	}
 }
 
-/*---------- INDEX SECTION 2 - TOPO ----------*/
+
+/* ---------- INDEX SECTION 2 - TOPO ---------- */
 
 .topo {
 	text-align: center;
@@ -26,7 +24,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: center;						/* permet des width différents pour les boites de .topo  sinon ils s'étirent tous à 100% de .topo */
+	align-items: center;				/* différents width pour les boites de .topo */
 	h2 {
 		margin: 0;
 	}
@@ -39,16 +37,16 @@
 	}
 }
 
-/*---------- INDEX SECTION 3 - NAV ----------*/
+
+/* ------ INDEX SECTION 3 - NAV ------ */
 
 .use {
 	padding: 2rem 2rem 1rem 2rem;
 	&__box {
-		padding: 1rem 0 1rem 1rem;					/* ajustement : alignement left de h2 et nav & centrage nav__link*/
+		padding: 1rem 0 1rem 1rem;			/* changement : alignement left de h2 et nav avec nav__link au centre */
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-			/*border: solid 1px black;*/
 	}
 	&__line {
 		color: $color_00;
@@ -56,7 +54,7 @@
 		@include window;
 		margin-bottom: 2rem;
 		@include flex-align-row-center-center;
-		position: relative;						/* B */ /* pour pouvoir positionner les sous éléments */
+		position: relative;						/* position des sous éléments */
 		&-number {
 		color: $color_01;
 		width: 2rem;
@@ -64,26 +62,25 @@
 		border-radius: 2rem;
 		background-color: $color_1;
 		@include flex-align-row-center-center;
-		position: absolute;						/* B */ /* positionnement de use__number */
-		left: -1rem;							/* B */ /* positionnement de use__number */
+		position: absolute;						/* position de use__number */
+		left: -1rem;							/* position de use__number */
 		z-index: 10;
 		}
 		&-icone {
-		/*width: 2rem;*/
 		color: $color_1;
 		font-size: 1.3rem;
-		position: relative;						/* C */ /* positionnement de use__icone */
-		right: 1.5rem;							/* C */ /* positionnement de use__icone */
+		position: relative;						/* position de use__icone */
+		right: 1.5rem;							/* position de use__icone */
 		}
-		&::after {									/* éclaircissement de btn • élément en-dessous du texte → ::after */		
+		&::after {									/* éclaircissement de btn - élément en-dessous du texte */		
 		content:"";
 		height: 100%;
 		width: 100%;
-		border-radius: 1.5rem;					/* cf border-radius de @mixin window */
+		border-radius: 1.5rem;					
 		background-color: lighten($color_2, 15%);		
-		position: absolute;						/* G */ /* pour positionnement de ::after dans btn */
-		left: 0;								/* G */ /* positionnement de ::after dans btn */
-		top: 0;									/* G */ /* positionnement de ::after dans btn */
+		position: absolute;						/* Position de ::after dans btn */
+		left: 0;								/* position de ::after dans btn */
+		top: 0;									/* position de ::after dans btn */
 		opacity: 0;								/* état initial de ::after */
 		transition: opacity 200ms ease-in-out;
 		}
@@ -96,9 +93,7 @@
 }
 
 
-
-
-/*---------- INDEX SECTION 4 • RESTOS ----------*/
+/* ------ INDEX SECTION 4 - RESTOS ------ */
 
 .restos {
 	background-color: $color_4;
@@ -109,14 +104,14 @@
 	justify-content: space-between;
 	}
 }
+
 .card {
-		/* background-color: $color_01 */
-		width: 100%;							/* pour firefox */
+		width: 100%;							
 		border-radius: 1.5rem;
 		overflow: hidden;
 		box-shadow: 2px 5px 10px darken($color_4, 20%);
 		margin-bottom: 2rem;
-		position: relative;						/* D */ /* pour pouvoir positionner les enfants */
+		position: relative;						/* Positionner les enfants */
 	&__link {
 		color: $color_00;
 		text-decoration: none;
@@ -168,12 +163,12 @@
 }
 
 
-
 @media all and (max-width: 575px) {
 	.card {
 		width: 100%;
 	}
 }
+
 
 @media (min-width: 576px) and (max-width: 1280px) {
 	.card {
@@ -184,6 +179,7 @@
 		margin: auto;
 	}
 }
+
 
 @media all and (min-width: 1281px) {
 	.card {

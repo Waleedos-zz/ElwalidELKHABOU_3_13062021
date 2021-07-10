@@ -1,6 +1,7 @@
-/*------ Lignes "index / fonctionnement" & "restos / dish" ------*/
+/* --- Lignes "index et fonctionnement" & "restos et dish" ---*/
 
-@mixin window {
+@mixin window 
+{
 	width: 100%;
 	/*min-width: 25rem;*/
 	height: 5rem;
@@ -9,7 +10,7 @@
 }
 
 
-/*------ Alignement (h4, p) "index / cartes resto" & "restos / dish"------*/
+/* --- Alignement (h4, p) "index / cartes resto" & "restos / dish" --- */
 
 @mixin ajust-h4-p {
 	h4, p {
@@ -26,7 +27,7 @@
 	}
 }
 
-/* ------ Flex - alignement et ajustement mep ------ */
+/* --- Flex - alignement et ajustement mep --- */
 
 @mixin flex-align-row-between-center-padding {
 	padding: 0 2rem 0 1rem;
@@ -37,27 +38,27 @@
 }
 
 @mixin flex-align-row-center-center {
-	display: flex;					/* A */ /* pour alignement des sous éléments */
-	justify-content: center;		/* A */ /* alignement horizontal des sous éléments */
-	align-items: center; 			/* A */ /* alignement vertical des sous éléments */
+	display: flex;					/* pour alignement des sous éléments */
+	justify-content: center;		/* alignement horizontal des sous éléments */
+	align-items: center; 			/* alignement vertical des sous éléments */
 }
 
 @mixin flex-align-row-between-end-padding {
 	padding: 0 0 0 1rem;
-	display: flex;					/* A */ /* pour alignement des sous éléments */
-	justify-content: space-between;	/* A */ /* alignement horizontal des sous éléments */
-	align-items: flex-end; 			/* A */ /* alignement vertical des sous éléments */
+	display: flex;					/* pour alignement des sous éléments */
+	justify-content: space-between;	/* alignement horizontal des sous éléments */
+	align-items: flex-end; 			/* alignement vertical des sous éléments */
 }
 
 @mixin flex-align-row-nowrap-between-start-end-padding {
 	padding-left: 1rem;
-	display: flex;					/* A */ /* pour alignement des sous éléments */
+	display: flex;					/* pour alignement des sous éléments */
 	flex-wrap: nowrap;				
-	justify-content: flex-start;	/* A */ /* alignement horizontal des sous éléments */
-	align-items: flex-end; 			/* A */ /* alignement vertical des sous éléments */
+	justify-content: flex-start;	/* alignement horizontal des sous éléments */
+	align-items: flex-end; 			/* alignement vertical des sous éléments */
 }
 
-/* ------ visuel resto "pages restos / identity ------ */
+/* --- visuel resto "pages restos / identity --- */
 
 @mixin identity {
 	width: 100%;
