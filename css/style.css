@@ -13,10 +13,76 @@
 /* vert */
 /* gris clair */
 /* pages resto */
-/*-------------- Lignes "index / fonctionnement" & "restos / dish" --------------*/
-/*-------------- Alignement (h4, p) "index / cartes resto" & "restos / dish"--------------*/
-/*-------------- Flex • alignement et ajustement mep --------------*/
-/*-------------- visuel resto "pages restos / identity--------------*/
+/*------ Lignes "index / fonctionnement" & "restos / dish" ------*/
+/*------ Alignement (h4, p) "index / cartes resto" & "restos / dish"------*/
+/* ------ Flex - alignement et ajustement mep ------ */
+/* ------ visuel resto "pages restos / identity ------ */
+.button {
+  color: #FFFFFF;
+  height: 3.5rem;
+  min-width: 15rem;
+  border-radius: 2rem;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  box-shadow: 2px 5px 10px #aaaaaa;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  /* pour alignement du texte de btn */
+  justify-content: center;
+  /* alignement horizontal du texte de btn */
+  align-items: center;
+  /* alignement vertical du texte de btn */
+  position: relative;
+  /* G */
+  /* pour positionnement de ::before dans btn */
+}
+.button::after {
+  /* éclaircissement de btn - élément en-dessous du texte → ::after */
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  background-color: #FFFFFF;
+  box-shadow: 2px 5px 5px #000000;
+  position: absolute;
+  /* pour positionnement de ::after dans btn */
+  left: 0;
+  /* positionnement de ::after dans btn */
+  top: 0;
+  /* positionnement de ::after dans btn */
+  opacity: 0;
+  /* état initial de ::after */
+  transition: opacity 500ms ease-in-out;
+}
+.button:hover::after {
+  opacity: 0.2;
+  /* état final de ::after */
+}
+
+.header {
+  padding: 20px 0;
+  position: relative;
+  /* F */
+  /* pour le positionnement de .return */
+  display: flex;
+  align-items: center;
+}
+.header__return {
+  font-size: 1.8rem;
+  position: absolute;
+  /* F */
+  /* positionnement de .return */
+  left: 2rem;
+  /* F */
+  /* positionnement de .return */
+}
+.header__return .fas {
+  color: #000000;
+}
+.header__logo {
+  margin: auto;
+}
+
 /* Break points 480 (560) 780 960*/
 body {
   font-family: Roboto-Regular, Arial, sans-serif;
@@ -40,7 +106,7 @@ h1 {
 
 * {
   box-sizing: border-box;
-  /* les padding et bordures ne modifient pas les dimensions des boites */
+  /* pas de modification des dimensions des boites avec padding et margin */
 }
 
 /*# sourceMappingURL=style.css.map */

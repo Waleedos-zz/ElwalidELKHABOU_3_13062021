@@ -1,12 +1,12 @@
 .header {
 	padding: 20px 0;
-	position: relative;			/* F */ /* pour le positionnement de .return */
+	position: relative;			/* pour le positionnement de .return */
 	display: flex;
 	align-items: center;
 	&__return {
 		font-size: 1.8rem;
-		position: absolute;		/* F */ /* positionnement de .return */
-		left: 2rem;				/* F */ /* positionnement de .return */
+		position: absolute;		/* positionnement de .return */
+		left: 2rem;				/* positionnement de .return */
 		.fas {
 			color: $color_00;
 		}
