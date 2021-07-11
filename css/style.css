@@ -12,11 +12,10 @@
 /* rose */
 /* vert */
 /* gris clair */
-/* pages resto */
 /* --- Lignes "index et fonctionnement" & "restos et dish" ---*/
 /* --- Alignement (h4, p) "index / cartes resto" & "restos / dish" --- */
 /* --- Flex - alignement et ajustement mep --- */
-/* --- visuel resto "pages restos / identity --- */
+/* --- choix et id des restos "pages restos" / identity --- */
 .button {
   color: #FFFFFF;
   height: 3.5rem;
@@ -80,6 +79,11 @@
   margin: auto;
 }
 
+@media all and (max-width: 575px) {
+  .card {
+    width: 100%;
+  }
+}
 /* ---------- INDEX SECTION 1 - SEARCH ---------- */
 .search {
   padding: 20px 0;
@@ -132,10 +136,9 @@
   color: #000000;
   background-color: #F6F6F6;
   width: 100%;
-  /*min-width: 25rem;*/
   height: 5rem;
   border-radius: 1.5rem;
-  box-shadow: 2px 5px 10px #c3c3c3;
+  box-shadow: 2px 5px 5px #c3c3c3;
   margin-bottom: 2rem;
   display: flex;
   /* pour alignement des sous éléments */
@@ -209,7 +212,7 @@
   width: 100%;
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 2px 5px 10px #c3c3c3;
+  box-shadow: 2px 5px 5px #c3c3c3;
   margin-bottom: 2rem;
   position: relative;
   /* Positionner les enfants */
@@ -260,13 +263,10 @@
   background-color: #99E2D0;
   padding: 0.5rem 1rem;
   position: absolute;
-  /* D */
   /* positionnement de card__new */
   top: 0.1rem;
-  /* D */
   /* positionnement de card__new */
   right: 1rem;
-  /* D */
   /* positionnement de card__new */
 }
 .card:hover .card__new {
@@ -281,11 +281,6 @@
   transform: scale(1);
 }
 
-@media all and (max-width: 575px) {
-  .card {
-    width: 100%;
-  }
-}
 @media (min-width: 576px) and (max-width: 1280px) {
   .card {
     width: 47%;
@@ -303,6 +298,31 @@
 
   .use__line {
     max-width: 30%;
+  }
+}
+.foot {
+  color: #FFFFFF;
+  background-color: #444444;
+  padding: 1rem 2rem;
+}
+.foot__link a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.foot__link a:hover {
+  color: #FF79DA;
+  transition: all 100ms ease-in-out;
+}
+.foot__icone {
+  font-size: 0.9rem;
+  width: 1.8rem;
+}
+
+@media all and (min-width: 576px) {
+  .foot > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 /* Break points 480 (560) 780 960*/

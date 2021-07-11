@@ -3,10 +3,9 @@
 @mixin window 
 {
 	width: 100%;
-	/*min-width: 25rem;*/
 	height: 5rem;
 	border-radius: 1.5rem;
-	box-shadow: 2px 5px 10px darken($color_4, 20%);
+	box-shadow: 2px 5px 5px darken($color_4, 20%);
 }
 
 
@@ -16,12 +15,14 @@
 	h4, p {
 		overflow: hidden;
 		white-space: nowrap;
-		text-overflow: ellipsis;				/* tronque le texte avec ... / fonctionne si largeur fixe */
+		text-overflow: ellipsis;	/* tronque le texte avec ... / fonctionne si largeur fixe */
 	}
+	
 	h4 {
 		margin-top: 1rem;
 		margin-bottom: 0;
 	}
+	
 	p {
 		margin-top: 0.5rem;
 	}
@@ -58,7 +59,7 @@
 	align-items: flex-end; 			/* alignement vertical des sous éléments */
 }
 
-/* --- visuel resto "pages restos / identity --- */
+/* --- choix et id des restos "pages restos" / identity --- */
 
 @mixin identity {
 	width: 100%;

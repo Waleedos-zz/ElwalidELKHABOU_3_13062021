@@ -1,3 +1,9 @@
+@media all and (max-width: 575px) {
+	.card {
+		width: 100%;
+	}
+}
+
 /* ---------- INDEX SECTION 1 - SEARCH ---------- */
 
 .search {
@@ -109,7 +115,7 @@
 		width: 100%;							
 		border-radius: 1.5rem;
 		overflow: hidden;
-		box-shadow: 2px 5px 10px darken($color_4, 20%);
+		box-shadow: 2px 5px 5px darken($color_4, 20%);
 		margin-bottom: 2rem;
 		position: relative;						/* Positionner les enfants */
 	&__link {
@@ -141,9 +147,9 @@
 		color: darken($color_3, 50%);
 		background-color: $color_3;
 		padding: .5rem 1rem;
-		position: absolute;							/* D */ /* positionnement de card__new */
-		top: .1rem;									/* D */ /* positionnement de card__new */
-		right: 1rem;								/* D */ /* positionnement de card__new */
+		position: absolute;							/* positionnement de card__new */
+		top: .1rem;									/* positionnement de card__new */
+		right: 1rem;								/* positionnement de card__new */
 	}
 	&:hover {
 		.card__new {
@@ -161,14 +167,6 @@
 		}
 	}
 }
-
-
-@media all and (max-width: 575px) {
-	.card {
-		width: 100%;
-	}
-}
-
 
 @media (min-width: 576px) and (max-width: 1280px) {
 	.card {
