@@ -325,6 +325,202 @@
     justify-content: space-between;
   }
 }
+/*---------- PAGES RESTO SECTION 1 • IDENTITY ----------*/
+.identity-0 {
+  /* page_template */
+  background-image: url("../pictures/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: 110%;
+  width: 100%;
+  height: 22rem;
+  padding-top: 1.5rem;
+}
+.identity-0__head {
+  height: 7rem;
+  background-color: #F6F6F6;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  top: 15rem;
+  padding: 0 2rem 0 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.identity-1 {
+  /* page_1 */
+  background-image: url("../pictures/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: 110%;
+  width: 100%;
+  height: 22rem;
+  padding-top: 1.5rem;
+}
+.identity-1__head {
+  height: 7rem;
+  background-color: #F6F6F6;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  top: 15rem;
+  padding: 0 2rem 0 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.identity-2 {
+  /* page_2 */
+  background-image: url("../pictures/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: 100%;
+  background-position: 0 -150px;
+  width: 100%;
+  height: 22rem;
+  padding-top: 1.5rem;
+}
+.identity-2__head {
+  height: 7rem;
+  background-color: #F6F6F6;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  top: 15rem;
+  padding: 0 2rem 0 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.identity-3 {
+  /* page_3 */
+  background-image: url("../pictures/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: 110%;
+  width: 100%;
+  height: 22rem;
+  padding-top: 1.5rem;
+}
+.identity-3__head {
+  height: 7rem;
+  background-color: #F6F6F6;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  top: 15rem;
+  padding: 0 2rem 0 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.identity-4 {
+  /* page_4 */
+  background-image: url("../pictures/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: 100%;
+  width: 100%;
+  height: 22rem;
+  padding-top: 1.5rem;
+}
+.identity-4__head {
+  height: 7rem;
+  background-color: #F6F6F6;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  top: 15rem;
+  padding: 0 2rem 0 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*---------- PAGES RESTO SECTION 1 • MENU ----------*/
+.menu {
+  background-color: #F6F6F6;
+  padding: 0 1rem 0.5rem 1rem;
+}
+.menu__group {
+  padding-top: 0.5rem;
+  position: relative;
+  animation: group 800ms both ease-out;
+}
+.menu__line {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #99E2D0;
+  border: none;
+  margin: -1rem 0 1.5rem 0;
+}
+.menu__dish {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 5rem;
+  border-radius: 1.5rem;
+  box-shadow: 2px 5px 5px #c3c3c3;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu__dish--valid {
+  /* animation coche plat */
+  width: 130%;
+  padding-left: 1rem;
+  display: flex;
+  /* pour alignement des sous éléments */
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  /* alignement horizontal des sous éléments */
+  align-items: flex-end;
+  /* alignement vertical des sous éléments */
+}
+.menu__dish-box-1 {
+  width: 60%;
+}
+.menu__dish-box-1 h4, .menu__dish-box-1 p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* tronque le texte avec ... / fonctionne si largeur fixe */
+}
+.menu__dish-box-1 h4 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.menu__dish-box-1 p {
+  margin-top: 0.5rem;
+}
+.menu__dish-box-2 {
+  width: 20%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*---------- PAGES RESTO SECTION 1 • COMMAND ----------*/
+.command {
+  background-color: #F6F6F6;
+  padding: 3rem;
+  display: flex;
+  /* permet d'appliquer le padding de button plutôt que le witdh 100% du parent par défaut */
+  justify-content: center;
+}
+.command__link {
+  text-decoration: none;
+}
+
+@media (min-width: 576px) and (max-width: 1280px) {
+  .menu-wrap {
+    width: 70%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 1281px) {
+  .menu-wrap {
+    width: 32%;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 /* Break points 480 (560) 780 960*/
 body {
   font-family: Roboto-Regular, Arial, sans-serif;
