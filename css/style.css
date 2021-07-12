@@ -12,6 +12,8 @@
 /* rose */
 /* vert */
 /* gris clair */
+/* pages resto */
+/* loader */
 /* --- Lignes "index et fonctionnement" & "restos et dish" ---*/
 /* --- Alignement (h4, p) "index / cartes resto" & "restos / dish" --- */
 /* --- Flex - alignement et ajustement mep --- */
@@ -58,6 +60,103 @@
   /* état final de ::after */
 }
 
+.loader-page {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  animation: stop-loading 0.2s 3s forwards;
+}
+
+.loader-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+.loader-box > .loader:nth-child(3) {
+  position: relative;
+  top: -93px;
+}
+
+.loader {
+  width: 300px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.loader__ball {
+  width: 15px;
+  /* taille des balles plus petite → meilleure parformance de l'animation : fps reste inférieur ou très proche de 60 (si 25 px pics vers 70 fps) */
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+  animation: anim-ball 0.5s alternate ease;
+  animation-iteration-count: 7;
+  /* stoppe l'animation au bout de 3,5s = jusque balles positionnées en haut */
+}
+.loader__shadow {
+  width: 15px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #aaaaaa;
+  opacity: 0;
+  filter: blur(1px);
+  /* effet flou */
+  z-index: -1;
+  animation: anim-shadow 0.5s alternate ease;
+  animation-iteration-count: 7;
+}
+.loader p {
+  width: 15px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader > .loader__ball:nth-child(1) {
+  background-color: #9356DC;
+  animation-delay: 200ms;
+}
+.loader > .loader__shadow:nth-child(1) {
+  animation-delay: 200ms;
+}
+.loader > p:nth-child(2) {
+  animation: anim-text 1s ease;
+  animation-iteration-count: 4;
+  /* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
+  animation-delay: 200ms;
+}
+.loader > .loader__ball:nth-child(2) {
+  background-color: #FF79DA;
+  animation-delay: 400ms;
+}
+.loader > .loader__shadow:nth-child(2) {
+  animation-delay: 400ms;
+}
+.loader > p:nth-child(4) {
+  animation: anim-text 1s ease;
+  animation-iteration-count: 4;
+  /* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
+  animation-delay: 400ms;
+}
+.loader > .loader__ball:nth-child(3) {
+  background-color: #99E2D0;
+  animation-delay: 600ms;
+}
+.loader > .loader__shadow:nth-child(3) {
+  animation-delay: 600ms;
+}
+.loader > p:nth-child(6) {
+  animation: anim-text 1s ease;
+  animation-iteration-count: 4;
+  /* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
+  animation-delay: 600ms;
+}
+
 .header {
   padding: 20px 0;
   position: relative;
@@ -79,12 +178,38 @@
   margin: auto;
 }
 
-@media all and (max-width: 575px) {
-  .card {
-    width: 100%;
+.foot {
+  color: #FFFFFF;
+  background-color: #444444;
+  padding: 1rem 2rem;
+}
+.foot__link a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.foot__link a:hover {
+  color: #FF79DA;
+  transition: all 100ms ease-in-out;
+}
+.foot__icone {
+  font-size: 0.9rem;
+  width: 1.8rem;
+}
+
+@media all and (min-width: 576px) {
+  .foot > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
-/* ---------- INDEX SECTION 1 - SEARCH ---------- */
+/* ----- INDEX MAIN -/- LOADING ----- */
+.index {
+  visibility: hidden;
+  animation: main-loading 0.2s 3.2s forwards;
+}
+
+/* ----- INDEX SECTION 1 -/- SEARCH ----- */
 .search {
   padding: 20px 0;
   background: linear-gradient(#c3c3c3, #e9e9e9 10%);
@@ -94,12 +219,11 @@
 .search__input {
   width: 11rem;
   text-align: center;
-  font-size: 18px;
   border: none;
   background: transparent;
 }
 
-/* ---------- INDEX SECTION 2 - TOPO ---------- */
+/* ----- INDEX SECTION 2 -/- TOPO ---- */
 .topo {
   text-align: center;
   background-color: #F6F6F6;
@@ -108,7 +232,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* différents width pour les boites de .topo */
+  /* permet des width différents pour les boites de .topo  pour ils ne s'étirent pas tous à 100% de .topo */
 }
 .topo h2 {
   margin: 0;
@@ -121,16 +245,17 @@
   text-decoration: none;
 }
 
-/* ------ INDEX SECTION 3 - NAV ------ */
+/* ----- INDEX SECTION 3 -/- NAV ----- */
 .use {
   padding: 2rem 2rem 1rem 2rem;
 }
 .use__box {
   padding: 1rem 0 1rem 1rem;
-  /* changement : alignement left de h2 et nav avec nav__link au centre */
+  /* alignement left de h2 et nav avec centrage de nav__link*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  /*border: solid 1px black;*/
 }
 .use__line {
   color: #000000;
@@ -147,7 +272,7 @@
   align-items: center;
   /* alignement vertical des sous éléments */
   position: relative;
-  /* position des sous éléments */
+  /* pour pouvoir positionner les sous éléments */
 }
 .use__line-number {
   color: #FFFFFF;
@@ -162,32 +287,34 @@
   align-items: center;
   /* alignement vertical des sous éléments */
   position: absolute;
-  /* position de use__number */
+  /* positionnement de use__number */
   left: -1rem;
-  /* position de use__number */
+  /* positionnement de use__number */
   z-index: 10;
 }
 .use__line-icone {
+  /*width: 2rem;*/
   color: #9356DC;
   font-size: 1.3rem;
   position: relative;
-  /* position de use__icone */
+  /* positionnement de use__icone */
   right: 1.5rem;
-  /* position de use__icone */
+  /* positionnement de use__icone */
 }
 .use__line::after {
-  /* éclaircissement de btn - élément en-dessous du texte */
+  /* éclaircissement de btn -/- élément en-dessous du texte → ::after */
   content: "";
   height: 100%;
   width: 100%;
   border-radius: 1.5rem;
+  /* cf border-radius de @mixin window */
   background-color: #ffc6ef;
   position: absolute;
-  /* Position de ::after dans btn */
+  /* pour positionnement de ::after dans btn */
   left: 0;
-  /* position de ::after dans btn */
+  /* positionnement de ::after dans btn */
   top: 0;
-  /* position de ::after dans btn */
+  /* positionnement de ::after dans btn */
   opacity: 0;
   /* état initial de ::after */
   transition: opacity 200ms ease-in-out;
@@ -197,7 +324,7 @@
   /* état final de ::after */
 }
 
-/* ------ INDEX SECTION 4 - RESTOS ------ */
+/* ----- INDEX SECTION 4 -/- RESTOS ----- */
 .restos {
   background-color: #F6F6F6;
   padding: 2rem;
@@ -209,13 +336,15 @@
 }
 
 .card {
+  /* background-color: $color_01 */
   width: 100%;
+  /* pour firefox */
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 2px 5px 5px #c3c3c3;
+  box-shadow: 2px 5px 10px #c3c3c3;
   margin-bottom: 2rem;
   position: relative;
-  /* Positionner les enfants */
+  /* pour pouvoir positionner les enfants */
 }
 .card__link {
   color: #000000;
@@ -281,6 +410,11 @@
   transform: scale(1);
 }
 
+@media all and (max-width: 575px) {
+  .card {
+    width: 100%;
+  }
+}
 @media (min-width: 576px) and (max-width: 1280px) {
   .card {
     width: 47%;
@@ -300,32 +434,7 @@
     max-width: 30%;
   }
 }
-.foot {
-  color: #FFFFFF;
-  background-color: #444444;
-  padding: 1rem 2rem;
-}
-.foot__link a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.foot__link a:hover {
-  color: #FF79DA;
-  transition: all 100ms ease-in-out;
-}
-.foot__icone {
-  font-size: 0.9rem;
-  width: 1.8rem;
-}
-
-@media all and (min-width: 576px) {
-  .foot > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-/*---------- PAGES RESTO SECTION 1 • IDENTITY ----------*/
+/* ----- PAGES RESTO SECTION 1 -/- IDENTITY ----- */
 .identity-0 {
   /* page_template */
   background-image: url("../pictures/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
@@ -432,7 +541,7 @@
   align-items: center;
 }
 
-/*---------- PAGES RESTO SECTION 1 • MENU ----------*/
+/* ----- PAGES RESTO SECTION 1 -/- MENU ----- */
 .menu {
   background-color: #F6F6F6;
   padding: 0 1rem 0.5rem 1rem;
@@ -458,6 +567,38 @@
   margin-bottom: 1rem;
   overflow: hidden;
   cursor: pointer;
+  animation: dish 1s both cubic-bezier(0, 0, 0.2, 1);
+  /* un peu plus doux que ease-out à la fin */
+}
+.menu__dish--L1 {
+  animation-delay: 960ms;
+}
+.menu__dish--L2 {
+  animation-delay: 1120ms;
+}
+.menu__dish--L3 {
+  animation-delay: 1280ms;
+}
+.menu__dish--L4 {
+  animation-delay: 1440ms;
+}
+.menu__dish--L5 {
+  animation-delay: 1600ms;
+}
+.menu__dish--L6 {
+  animation-delay: 1760ms;
+}
+.menu__dish--L7 {
+  animation-delay: 1920ms;
+}
+.menu__dish--L8 {
+  animation-delay: 2080ms;
+}
+.menu__dish--L9 {
+  animation-delay: 2240ms;
+}
+.menu__dish--L10 {
+  animation-delay: 2400ms;
 }
 .menu__dish--valid {
   /* animation coche plat */
@@ -470,6 +611,14 @@
   /* alignement horizontal des sous éléments */
   align-items: flex-end;
   /* alignement vertical des sous éléments */
+  transition: all 500ms;
+}
+.menu__dish--valid:hover {
+  /* prépa animation */
+  width: 100%;
+}
+.menu__dish--valid:hover > .menu__dish-box-3 > .fas {
+  transform: rotate(1turn);
 }
 .menu__dish-box-1 {
   width: 60%;
@@ -492,8 +641,25 @@
   text-align: center;
   font-weight: bold;
 }
+.menu__dish-box-3 {
+  width: 20%;
+  height: 5.5rem;
+  background-color: #99E2D0;
+  margin-top: -0.5rem;
+  /* ajustement centrage vertical ??? */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu__dish-box-3 .fas {
+  color: #FFFFFF;
+  font-size: 2rem;
+  transform: rotate(0);
+  transition: transform 420ms 80ms;
+  /* choix valeur cf ChromeDevTool */
+}
 
-/*---------- PAGES RESTO SECTION 1 • COMMAND ----------*/
+/* ----- PAGES RESTO SECTION 1 -/- COMMAND -----*/
 .command {
   background-color: #F6F6F6;
   padding: 3rem;
@@ -544,7 +710,7 @@ h1 {
 
 * {
   box-sizing: border-box;
-  /* pas de modification des dimensions des boites avec padding et margin */
+  /* les padding et bordures ne modifient pas les dimensions des boites */
 }
 
 /*# sourceMappingURL=style.css.map */
