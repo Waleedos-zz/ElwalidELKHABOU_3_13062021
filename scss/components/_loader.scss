@@ -5,7 +5,7 @@
 	z-index: 100;
 	position: absolute;
 	top: 0;
-	animation: stop-loading .2s 3s forwards;
+	animation: stop-loading .4s 5s forwards;
 }
 .loader-box {
 	display: flex;
@@ -39,7 +39,7 @@
 		opacity: 0;
 		filter: blur(1px);							/* effet flou */
 		z-index: -1;
-		animation: anim-shadow 0.5s alternate ease;
+		animation: anim-shadow 1s alternate ease;
 		animation-iteration-count: 7;
 	}
 	p {
@@ -58,8 +58,8 @@
 			animation-delay: $load-delay-step * $i;
 		}
 		> p:nth-child(#{2*$i}) {
-			animation: anim-text 1s ease;
-			animation-iteration-count: 4;		/* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
+			animation: anim-text 2s ease;
+			animation-iteration-count: 8;		/* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
 			animation-delay: $load-delay-step * $i;
 		}
 	}
