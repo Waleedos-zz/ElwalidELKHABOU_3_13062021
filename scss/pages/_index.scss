@@ -1,8 +1,8 @@
 /* ----- INDEX MAIN -/- LOADING ----- */
-.index {
+/* .index {
 	visibility: hidden;
 	animation: main-loading .2s 3.2s forwards;
-}
+} */
 
 /* ----- INDEX SECTION 1 -/- SEARCH ----- */
 
@@ -13,6 +13,7 @@
 	justify-content: center;
 	&__input {
 		width: 11rem;
+		font-size: 18px;
 		text-align: center;
 		border: none;
 		background: transparent;
