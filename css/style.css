@@ -203,7 +203,7 @@
   height: 15px;
   border-radius: 50%;
   position: relative;
-  animation: anim-ball 0.5s alternate ease;
+  animation: anim-ball 0.8s alternate ease;
   animation-iteration-count: 7;
   /* stoppe l'animation au bout de 3,5s = jusque balles positionnées en haut */
 }
