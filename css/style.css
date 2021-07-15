@@ -77,7 +77,7 @@
     visibility: visible;
   }
 }
-/*--------------- J'aime • remplissage coeur  ---------------*/
+/*------- J'aime -/- remplissage du coeur  -------*/
 @keyframes full-scale {
   from {
     transform: scale(0);
@@ -99,7 +99,7 @@
     opacity: 0;
   }
 }
-/*--------------- Index • photos resto  ---------------*/
+/* ------- Index -/- photos resto  ------- */
 @keyframes photo {
   from {
     transform: scale(1);
@@ -108,7 +108,7 @@
     transform: scale(1.2);
   }
 }
-/*--------------- Restos • menus  ---------------*/
+/* ------- Restos -/- menus  ------- */
 @keyframes group {
   from {
     left: -50rem;
@@ -198,9 +198,9 @@
   justify-content: space-evenly;
 }
 .loader__ball {
-  width: 15px;
+  width: 20px;
   /* taille des balles plus petite → meilleure parformance de l'animation : fps reste inférieur ou très proche de 60 (si 25 px pics vers 70 fps) */
-  height: 15px;
+  height: 20px;
   border-radius: 50%;
   position: relative;
   animation: anim-ball 0.8s alternate ease;
@@ -208,7 +208,7 @@
   /* stoppe l'animation au bout de 3,5s = jusque balles positionnées en haut */
 }
 .loader__shadow {
-  width: 15px;
+  width: 20px;
   height: 3px;
   border-radius: 50%;
   background-color: #aaaaaa;
@@ -264,6 +264,30 @@
   animation-iteration-count: 8;
   /* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
   animation-delay: 600ms;
+}
+
+.love {
+  font-size: 2rem;
+  position: relative;
+  /* pour positionnement de fas au dessus de far*/
+}
+.love > .fas {
+  color: #9356DC;
+  /* linear-gradient($color_1, $color_2); ??? */
+  position: absolute;
+  /* pour positionnement de fas au dessus de far */
+  left: 0;
+  /* pour positionnement de fas au dessus de far */
+  top: 0.15rem;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+.love:hover > .fas {
+  animation: full-scale 500ms 100ms forwards;
+}
+.love:hover > .far {
+  animation: detail 500ms 100ms forwards;
+  /* fait disparaître le coeur vide noir pour résoudre le problème de position de l'un sur l'autre */
 }
 
 .header {
@@ -487,7 +511,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  /* tronque le texte avec ... / fonctionne si largeur fixe */
+  /* comportement du dépassement en fin de ligne / fonctionne si largeur fixe */
 }
 .card__info h4 {
   margin-top: 1rem;
@@ -546,7 +570,7 @@
 /* ----- PAGES RESTO SECTION 1 -/- IDENTITY ----- */
 .identity-0 {
   /* page_template */
-  background-image: url("../pictures/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../img/restaurants/the_taste_palette.jpg");
   background-size: 110%;
   width: 100%;
   height: 22rem;
@@ -567,7 +591,7 @@
 
 .identity-1 {
   /* page_1 */
-  background-image: url("../pictures/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../img/restaurants/the_taste_palette.jpg");
   background-size: 110%;
   width: 100%;
   height: 22rem;
@@ -588,7 +612,7 @@
 
 .identity-2 {
   /* page_2 */
-  background-image: url("../pictures/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("../img/restaurants/the_enchanted_note.jpg");
   background-size: 100%;
   background-position: 0 -150px;
   width: 100%;
@@ -610,7 +634,7 @@
 
 .identity-3 {
   /* page_3 */
-  background-image: url("../pictures/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("../img/restaurants/the_french_style.jpg");
   background-size: 110%;
   width: 100%;
   height: 22rem;
@@ -631,7 +655,7 @@
 
 .identity-4 {
   /* page_4 */
-  background-image: url("../pictures/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../img/restaurants/delight_of_the_senses.jpg");
   background-size: 100%;
   width: 100%;
   height: 22rem;
@@ -736,7 +760,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  /* tronque le texte avec ... / fonctionne si largeur fixe */
+  /* comportement du dépassement en fin de ligne / fonctionne si largeur fixe */
 }
 .menu__dish-box-1 h4 {
   margin-top: 1rem;
@@ -796,7 +820,7 @@
     justify-content: space-between;
   }
 }
-/* Break points 480 (560) 780 960*/
+/* Break points 480 (560) 780 960 */
 body {
   font-family: Roboto-Regular, Arial, sans-serif;
   font-size: 1.1rem;

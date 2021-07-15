@@ -20,6 +20,7 @@
 	}
 }
 
+
 @keyframes anim-shadow {
 	from {
 		transform: scale(.8, .5);
@@ -35,6 +36,7 @@
 	}
 }
 
+
 @keyframes anim-text {
 	from {
 		transform: rotateX(1turn);
@@ -43,6 +45,7 @@
 		transform: rotateX(0);
 	}
 }
+
 
 @keyframes stop-loading {
 	from {
@@ -54,6 +57,7 @@
 	}
 }
 
+
 @keyframes main-loading {
 	from {
 		visibility: hidden;
@@ -63,7 +67,8 @@
 	}
 }
 
-/*--------------- J'aime • remplissage coeur  ---------------*/
+
+/*------- J'aime -/- remplissage du coeur  -------*/
 
 @keyframes full-scale {
 	from {
@@ -79,6 +84,7 @@
 	}
 }
 
+
 @keyframes detail {
 	from, 95% {
 		opacity: 1;
@@ -87,7 +93,8 @@
 		opacity: 0;
 	}
 }
-/*--------------- Index • photos resto  ---------------*/
+
+/* ------- Index -/- photos resto  ------- */
 
 @keyframes photo {
 	from {
@@ -98,7 +105,8 @@
 	}
 }
 
-/*--------------- Restos • menus  ---------------*/
+
+/* ------- Restos -/- menus  ------- */
 
 @keyframes group{
 	from {
@@ -108,6 +116,7 @@
 		left: 0;
 	}
 }
+
 
 @keyframes dish {
 	from {

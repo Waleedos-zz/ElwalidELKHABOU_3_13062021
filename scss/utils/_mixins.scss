@@ -15,7 +15,7 @@
 	h4, p {
 		overflow: hidden;
 		white-space: nowrap;
-		text-overflow: ellipsis;	/* tronque le texte avec ... / fonctionne si largeur fixe */
+		text-overflow: ellipsis;	/* comportement du dépassement en fin de ligne / fonctionne si largeur fixe */
 	}
 	
 	h4 {
