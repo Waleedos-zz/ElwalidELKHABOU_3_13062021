@@ -29,7 +29,7 @@
 		border-radius: 50%;
 		position: relative;
 		animation: anim-ball 0.8s alternate ease;
-		animation-iteration-count: 7;				/* stoppe l'animation au bout de 3,5s = jusque balles positionnées en haut */
+		animation-iteration-count: 7;				/* Pour stopper l'animation au bout de 3,5s = jusqu'à ce que les balles se positionnents en haut */
 	}
 	&__shadow {
 		width: $size-ball;
@@ -59,7 +59,7 @@
 		}
 		> p:nth-child(#{2*$i}) {
 			animation: anim-text 2s ease;
-			animation-iteration-count: 8;		/* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
+			animation-iteration-count: 8;		/* animation balles stoppée au bout de 3,5s -/- 4 cylcles pour l'animation texte */
 			animation-delay: $load-delay-step * $i;
 		}
 	}

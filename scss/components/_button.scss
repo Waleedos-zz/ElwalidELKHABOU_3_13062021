@@ -10,7 +10,7 @@
 	display: flex;								/* pour alignement du texte de btn */
 	justify-content: center;					/* alignement horizontal du texte de btn */
 	align-items: center; 						/* alignement vertical du texte de btn */
-	position: relative;							/* G */ /* pour positionnement de ::before dans btn */
+	position: relative;							/* pour positionnement de ::before dans btn */
 	&::after {									/* éclaircissement de btn - élément en-dessous du texte → ::after */
 		content:"";
 		height: 100%;
