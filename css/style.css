@@ -143,7 +143,6 @@
   align-items: center;
   /* alignement vertical du texte de btn */
   position: relative;
-  /* G */
   /* pour positionnement de ::before dans btn */
 }
 .button::after {
@@ -205,7 +204,7 @@
   position: relative;
   animation: anim-ball 0.8s alternate ease;
   animation-iteration-count: 7;
-  /* stoppe l'animation au bout de 3,5s = jusque balles positionnées en haut */
+  /* Pour stopper l'animation au bout de 3,5s = jusqu'à ce que les balles se positionnents en haut */
 }
 .loader__shadow {
   width: 20px;
@@ -236,7 +235,7 @@
 .loader > p:nth-child(2) {
   animation: anim-text 2s ease;
   animation-iteration-count: 8;
-  /* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
+  /* animation balles stoppée au bout de 3,5s -/- 4 cylcles pour l'animation texte */
   animation-delay: 200ms;
 }
 .loader > .loader__ball:nth-child(2) {
@@ -249,7 +248,7 @@
 .loader > p:nth-child(4) {
   animation: anim-text 2s ease;
   animation-iteration-count: 8;
-  /* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
+  /* animation balles stoppée au bout de 3,5s -/- 4 cylcles pour l'animation texte */
   animation-delay: 400ms;
 }
 .loader > .loader__ball:nth-child(3) {
@@ -262,7 +261,7 @@
 .loader > p:nth-child(6) {
   animation: anim-text 2s ease;
   animation-iteration-count: 8;
-  /* animation balles stoppée au bout de 3,5s → 4 cylcles pour l'animation texte */
+  /* animation balles stoppée au bout de 3,5s -/- 4 cylcles pour l'animation texte */
   animation-delay: 600ms;
 }
 
