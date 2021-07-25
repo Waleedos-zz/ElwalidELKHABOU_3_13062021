@@ -2,7 +2,8 @@
 # Nom du Site : Ohmyfood
 # Auteur : M . EL-WALID  EL-KHABOU
 
-## Adresse : https://waleedos.github.io/ElwalidELKHABOU_3_13062021/index.html
+## Adresse de mon Git: https://waleedos.github.io/ElwalidELKHABOU_3_13062021/index.html
+## Adresse de la Page du Projet : https://waleedos.github.io/ElwalidELKHABOU_3_13062021/
 
 ### L'objectif de ce projet est d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass
 ### Project goals : - Navigate between different html pages, - Use the SCSS language through SASS, - Create dynamic animations.
