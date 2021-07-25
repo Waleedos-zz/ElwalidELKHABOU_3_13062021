@@ -5,8 +5,8 @@
 	align-items: center;
 	&__return {
 		font-size: 1.8rem;
-		position: absolute;		/* positionnement de .return */
-		left: 2rem;				/* positionnement de .return */
+		position: absolute;		/* pour le positionnement de .return */
+		left: 2rem;				/* pour le positionnement de .return */
 		.fas {
 			color: $color_00;
 		}

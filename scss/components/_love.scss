@@ -1,10 +1,10 @@
 .love{				
 	font-size: 2rem;
-	position : relative;			/* pour positionnement de fas au dessus de far*/
+	position : relative;			/* pour le positionnement de fas au dessus de far*/
 	& > .fas {
 		color: $color_1; 			/* linear-gradient($color_1, $color_2); ??? */
-		position: absolute;			/* pour positionnement de fas au dessus de far */
-		left: 0;					/* pour positionnement de fas au dessus de far */
+		position: absolute;			/* pour le positionnement de fas au dessus de far */
+		left: 0;					/* pour le positionnement de fas au dessus de far */
 		top: .15rem;
 		transform: scale(0);
 		transform-origin: bottom;
