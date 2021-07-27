@@ -24,11 +24,11 @@
 ####    - HTML
 ####    - CSS (SASS)
 
+### Architecture utilisée : Norme archi 7.1
+
 
 ### Livrables: 
 ####    1. Page d’accueil
 ####    2. Pages de menu (x4)
 ####    3. [Validations][https://validator.w3.org/nu/?doc=https%3A%2F%2Fwaleedos.github.io%2FElwalidELKHABOU_3_13062021%2F]
-
-
-
+####    4. [Validations du CSS][https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwaleedos.github.io%2FElwalidELKHABOU_3_13062021%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr]# OHMYFOOD
