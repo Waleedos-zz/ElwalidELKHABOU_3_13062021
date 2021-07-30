@@ -137,16 +137,16 @@
   padding: 0 2rem;
   margin-bottom: 1rem;
   display: flex;
-  /* pour alignement du texte de btn */
+  /* pour l''alignement du texte de btn */
   justify-content: center;
-  /* alignement horizontal du texte de btn */
+  /* pour l'alignement horizontal du texte de btn */
   align-items: center;
-  /* alignement vertical du texte de btn */
+  /* pour l'alignement vertical du texte de btn */
   position: relative;
-  /* pour positionnement de ::before dans btn */
+  /* pour le positionnement de ::before dans btn */
 }
 .button::after {
-  /* éclaircissement de btn - élément en-dessous du texte → ::after */
+  /* pour l''éclaircissement de btn - élément en-dessous du texte → ::after */
   content: "";
   height: 100%;
   width: 100%;
@@ -154,11 +154,11 @@
   background-color: #FFFFFF;
   box-shadow: 2px 5px 5px #000000;
   position: absolute;
-  /* pour positionnement de ::after dans btn */
+  /* pour le positionnement de ::after dans btn */
   left: 0;
-  /* positionnement de ::after dans btn */
+  /* pour le positionnement de ::after dans btn */
   top: 0;
-  /* positionnement de ::after dans btn */
+  /* pour le positionnement de ::after dans btn */
   opacity: 0;
   /* état initial de ::after */
   transition: opacity 500ms ease-in-out;
@@ -173,7 +173,7 @@
   height: 100%;
   background-color: #FFFFFF;
   z-index: 100;
-  position: absolute;
+  position: fixed;
   top: 0;
   animation: stop-loading 0.4s 5s forwards;
 }
@@ -268,15 +268,15 @@
 .love {
   font-size: 2rem;
   position: relative;
-  /* pour positionnement de fas au dessus de far*/
+  /* pour le positionnement de fas au dessus de far*/
 }
 .love > .fas {
   color: #9356DC;
   /* linear-gradient($color_1, $color_2); ??? */
   position: absolute;
-  /* pour positionnement de fas au dessus de far */
+  /* pour le positionnement de fas au dessus de far */
   left: 0;
-  /* pour positionnement de fas au dessus de far */
+  /* pour le positionnement de fas au dessus de far */
   top: 0.15rem;
   transform: scale(0);
   transform-origin: bottom;
@@ -299,9 +299,9 @@
 .header__return {
   font-size: 1.8rem;
   position: absolute;
-  /* positionnement de .return */
+  /* pour le positionnement de .return */
   left: 2rem;
-  /* positionnement de .return */
+  /* pour le positionnement de .return */
 }
 .header__return .fas {
   color: #000000;
